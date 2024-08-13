@@ -1,5 +1,6 @@
 #pragma once
 
+#include <stack>
 #include "views/gamelist/ISimpleGameListView.h"
 #include "components/TextListComponent.h"
 
