@@ -35,6 +35,16 @@ else()
     MESSAGE("libMali.so not found")
 endif()
 
+#-------------------------------------------------------------------------------
+#check if we're running on linux
+MESSAGE("Looking for libGLESv2.so")
+if(EXISTS "${CMAKE_SYSROOT}/usr/lib/libGLESv2.so")
+    MESSAGE("libGLESv2.so found")
+    set(GLSystem "OpenGL ES")
+else()
+    MESSAGE("libGLESv2.so not found")
+endif()
+
 #finding necessary packages
 #-------------------------------------------------------------------------------
 if(${GLSystem} MATCHES "Desktop OpenGL")
